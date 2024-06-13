@@ -4,7 +4,8 @@
   "description": "This API is part of professor Rodrigo Manguinho's (Mango) training at Udemy.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist && tsc"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/tiagoluis12/api-advanced-node/issues"
   },
-  "homepage": "https://github.com/tiagoluis12/api-advanced-node#readme"
+  "homepage": "https://github.com/tiagoluis12/api-advanced-node#readme",
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "rimraf": "^5.0.7"
+  }
 }
