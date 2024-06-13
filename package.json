@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node dist/main/api",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf dist && tsc"
+    "build": "rimraf dist && tsc -p tsconfig-build.json",
+    "lint": "eslint",
+    "lint:fix": "npm run lint -- --fix"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,12 @@
   "devDependencies": {
     "@types/module-alias": "^2.0.4",
     "@types/node": "^20.14.2",
+    "@typescript-eslint/eslint-plugin": "^7.13.0",
+    "eslint": "^8.57.0",
+    "eslint-config-love": "^44.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.2.0",
     "typescript": "^5.4.5"
   },
   "dependencies": {
