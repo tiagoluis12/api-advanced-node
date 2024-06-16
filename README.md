@@ -3,7 +3,22 @@ This API is part of professor Rodrigo Manguinho's (Mango) training at Udemy.
 The objective of the training is to show how to create an API with a well-defined and decoupled architecture, using TDD (test-oriented programming) as a working methodology, Clean Architecture to distribute responsibilities in layers, always following the principles of SOLID and, whenever possible, applying Design Patterns to solve some common problems.
 <br /><br />
 
-> ## Princípios
+> ## Authentication with Facebook
+
+> ## Primary flow
+1. Get data (name, email and Facebook ID) from Facebook API
+2. Check if there is a user with the email received above
+3. Create an account for the user with the data received from Facebook
+4. Create an access token, from the user ID, with an expiration of 30 minutes
+5. Return the generated access token
+
+> ## Alternative flow: User already exists
+3. Update the user account with the data received from Facebook (Facebook ID and name - just update the name if the user account does not have a name)
+
+> ## Exception flow: Invalid or expired token
+1. Return an authentication error
+
+> ## Principles
 
 * Single Responsibility
 * Open Closed
@@ -51,7 +66,7 @@ The objective of the training is to show how to create an API with a well-define
 * Shotgun Surgery
 * Speculative Generality
 
-> ## Metodologias e Designs
+> ## Methodologies and Designs
 
 * TDD
 * Clean Architecture
@@ -63,7 +78,7 @@ The objective of the training is to show how to create an API with a well-define
 * Use Cases
 * Spike (Agile)
 
-> ## Bibliotecas e Ferramentas
+> ## Libraries and Tools
 
 * NPM
 * Typescript
@@ -96,21 +111,21 @@ The objective of the training is to show how to create an API with a well-define
 
 > ## Features do Typescript
 
-* POO Avançado
+* POO advanced
 * Strict Mode
 * Interface
 * TypeAlias
 * Namespace
 * Utility Types
-* Modularização de Paths
-* Configurações
+* Modularization of Paths
+* Settings
 * Build
 
 > ## Features de Testes
 
-* Testes Unitários
-* Testes de Integração
-* Cobertura de Testes
+* Unitary tests
+* Integration Tests
+* Test Coverage
 * Test Doubles
 * Mocks
 * Stubs
